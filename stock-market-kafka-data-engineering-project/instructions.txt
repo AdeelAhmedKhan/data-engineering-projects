@@ -1,0 +1,106 @@
+Connect to EC2 machine using ssh
+-------------------------------------------------
+# Use your downloaded PEM key to connect to your EC2 instance.
+# Replace the public DNS if your instance's IP changes.
+ssh -i "kafka-stock-market-project.pem" ec2-user@ec2-98-81-235-202.compute-1.amazonaws.com
+
+Download Kafka in EC2
+-------------------------------------------------
+# Download the latest Kafka binary and extract it.
+wget https://dlcdn.apache.org/kafka/3.9.1/kafka_2.13-3.9.1.tgz
+tar -xvf kafka_2.13-3.9.1.tgz
+
+
+Install Java
+-------------------------------------------------
+# Kafka requires Java. Install OpenJDK 8 and verify installation.
+sudo yum install java-1.8.0-openjdk
+java -version
+
+
+cd kafka_2.13-3.9.1
+
+Start Zoo-keeper:
+-------------------------------------------------
+# ZooKeeper is required for Kafka to run. Start it in one terminal.
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Keep this terminal open. Open another terminal for the next steps.
+
+Start Kafka-server:
+-------------------------------------------------
+# In a new terminal, SSH into your EC2 instance again.
+# Set Java heap options for Kafka to optimize memory usage.
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+cd kafka_2.13-3.9.1
+
+# Kafka by default advertises its private IP. To allow external connections,
+# you must update the advertised.listeners property in server.properties to use your EC2 public IP.
+# Edit the configuration file:
+sudo nano config/server.properties
+
+# Find the line:
+# advertised.listeners=PLAINTEXT://:9092
+# And change it to:
+# advertised.listeners=PLAINTEXT://<your-ec2-public-ip>:9092
+# Example:
+# advertised.listeners=PLAINTEXT://54.157.193.174:9092
+
+# Save and exit the editor.
+
+# Also, ensure your EC2 security group allows inbound traffic on port 9092 (Kafka) and 2181 (ZooKeeper).
+# Add rules for these ports in the AWS EC2 console.
+
+# Now start the Kafka server:
+bin/kafka-server-start.sh config/server.properties
+
+
+
+Create the topic:
+-------------------------------------------------
+# In a new terminal, SSH into your EC2 instance again.
+cd kafka_2.13-3.9.1
+# Create a Kafka topic named 'practice' with 1 partition and replication factor 1.
+bin/kafka-topics.sh --create --topic practice --bootstrap-server 54.157.193.174:9092 --replication-factor 1 --partitions 1
+
+Start Producer:
+-------------------------------------------------
+# Start a Kafka producer to send messages to the topic.
+bin/kafka-console-producer.sh --topic practice --bootstrap-server 54.157.193.174:9092
+
+Start Consumer:
+-------------------------------------------------
+# In a new terminal, SSH into your EC2 instance again.
+cd kafka_2.13-3.9.1
+# Start a Kafka consumer to read messages from the topic.
+bin/kafka-console-consumer.sh --topic practice --bootstrap-server 54.157.193.174:9092
+
+
+Store data in S3
+-------------------------------------------------
+# To store data in S3, first create an S3 bucket in AWS.
+# Then, create an IAM user with programmatic access and attach a policy (e.g., AmazonS3FullAccess).
+# Generate access and secret keys for this user.
+
+# On your EC2 or local machine, configure AWS CLI with these credentials:
+aws configure
+
+# You can now upload files to your S3 bucket using:
+aws s3 cp <local-file> s3://<your-bucket-name>/
+
+
+Data Analytics Pipeline with AWS Glue and Athena
+-------------------------------------------------
+# For analytics, create an AWS Glue crawler:
+# - Go to AWS Glue Console > Crawlers > Add crawler.
+# - Set the S3 bucket as the data source.
+# - Configure an IAM role for Glue to access S3.
+# - Run the crawler to create a table in the Glue Data Catalog.
+
+# Use AWS Athena to query your data:
+# - Go to Athena in AWS Console.
+# - Set the query result location to an S3 bucket.
+# - Use the tables created by Glue to run SQL queries for analytics.
+
+# The Glue crawler will automatically infer the schema and make your data available for querying in Athena.
+# This enables end-to-end data engineering and analytics on your Kafka data pipeline.
