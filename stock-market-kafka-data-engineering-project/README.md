@@ -6,7 +6,7 @@ This project demonstrates an end-to-end data engineering pipeline using Apache K
 
 The following diagram illustrates the high-level architecture of the pipeline:
 
-![Architecture Diagram](architecture.jpg)
+![Architecture Diagram](Architecture.jpg)
 
 **Components:**
 - **Kafka Producer:** Sends stock market data to a Kafka topic.
@@ -63,7 +63,7 @@ The following diagram illustrates the high-level architecture of the pipeline:
 - [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
 - [AWS Glue Documentation](https://docs.aws.amazon.com/glue/)
 - [AWS Athena Documentation](https://docs.aws.amazon.com/athena/)
-- Project inspiration: [YouTube Video - Stock Market Data Engineering Pipeline with Kafka & AWS](https://www.youtube.com/) <!-- Replace with actual video URL if available -->
+- Project inspiration: [YouTube Video - Stock Market Data Engineering Pipeline with Kafka & AWS]([https://www.youtube.com/](https://youtu.be/KerNf0NANMo?feature=shared) <!-- Replace with actual video URL if available -->
 
 ---
 
