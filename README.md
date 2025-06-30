@@ -1,6 +1,8 @@
 # 🚀 Data Engineering Projects Repository
 
-![Data Engineering Banner](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80)
+<p align="center">
+  <img src="https://unsplash.com/photos/graphical-user-interface--WXQm_NTK0U&auto=format&fit=crop&w=1350&q=80" alt="Data Engineering Banner" width="700"/>
+</p>
 
 > A collection of hands-on Data Engineering projects showcasing modern data pipelines, ETL, orchestration, data warehousing, cloud integration, and real-world datasets.
 
