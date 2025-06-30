@@ -1,7 +1,5 @@
 # 🚀 Data Engineering Projects Repository
 
-![image](https://github.com/user-attachments/assets/44f54ce2-1d4c-4873-8ed2-d063d3f57eb2)
-
 > A collection of hands-on Data Engineering projects showcasing modern data pipelines, ETL, orchestration, data warehousing, cloud integration, and real-world datasets.
 
 ---
