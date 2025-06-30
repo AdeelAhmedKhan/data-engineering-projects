@@ -1,6 +1,6 @@
 # 🚀 Data Engineering Projects Repository
 
-![Data Engineering Banner](https://i.imgur.com/ME5GxU5.png)
+![Data Engineering Banner](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80)
 
 > A collection of hands-on Data Engineering projects showcasing modern data pipelines, ETL, orchestration, data warehousing, cloud integration, and real-world datasets.
 
@@ -42,11 +42,11 @@ Each project is organized in its own subdirectory with a `README.md`, code, conf
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/data-engineering-projects.git
+   git clone https://github.com/AdeelAhmedKhan/data-engineering-projects.git
 
 2. Navigate to a project folder:
    ```bash
-    cd data-engineering-projects/project-namebash
+    cd data-engineering-projects/project-name
    
 3. Follow the instructions in the project's README to get started!
 
