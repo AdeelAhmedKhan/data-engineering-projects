@@ -1,6 +1,6 @@
 🔷 STEP 1: Create the VPC
 
-Refer to the architecture diagram (`architecture.png`) for a visual overview of the setup.
+Refer to the architecture diagram (`architecture.jpg`) for a visual overview of the setup.
 
 Let’s begin.
 
