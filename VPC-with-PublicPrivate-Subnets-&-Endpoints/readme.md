@@ -1,6 +1,6 @@
 # AWS Highly Available VPC with Public/Private Subnets and Endpoints
 
-![VPC Architecture Diagram](architecture.png)
+![VPC Architecture Diagram](architecture.jpg)
 
 This repository provides step-by-step instructions to create a secure, highly available AWS Virtual Private Cloud (VPC) with public and private subnets, internet/NAT gateways, and VPC endpoints for S3 and DynamoDB.
 
