@@ -1,0 +1,48 @@
+2025-05-09 03:30:30.901296: Preliminaries complete. Initiating ETL process
+2025-05-09 03:30:33.519173: Data extraction complete. Initiating Transformation process
+2025-05-09 03:30:33.566051: Data transformation complete. Initiating Loading process
+2025-05-09 03:30:33.581676: Data saved to CSV file
+2025-05-09 03:30:35.587805: Data loaded to Database as a table, Executing queries
+2025-05-09 03:30:35.587805: Process Complete
+2025-05-09 03:30:35.594898: Process Complete
+2025-05-09 03:30:35.597625: Process Complete
+2025-07-19 03:45:06.751112: Preliminaries complete. Initiating ETL process
+2025-07-19 03:45:09.038565: Data extraction complete. Initiating Transformation process
+2025-07-19 03:45:09.068262: Error during data transformation: "Missing required column: 'Market cap(US$ billion)'"
+2025-07-19 03:45:09.080292: Data saved to CSV file
+2025-07-19 03:45:09.107107: Data loaded to Database as a table, Executing queries
+2025-07-19 03:45:09.108501: Process Complete
+2025-07-19 03:45:09.109516: Error executing query: no such column: MC_GBP_Billion
+2025-07-19 03:45:09.110514: Process Complete
+2025-07-19 04:07:56.561672: Preliminaries complete. Initiating ETL process
+2025-07-19 04:07:58.497107: Data extraction complete. Initiating Transformation process
+2025-07-19 04:07:58.502647: Error during data transformation: "Missing required column: 'Market cap(US$ billion)'"
+2025-07-19 04:07:58.505732: Data saved to CSV file
+2025-07-19 04:07:58.524028: Data loaded to Database as a table, Executing queries
+2025-07-19 04:07:58.524964: Process Complete
+2025-07-19 04:07:58.524964: Error executing query: no such column: MC_GBP_Billion
+2025-07-19 04:07:58.524964: Process Complete
+2025-07-19 04:10:51.540765: Preliminaries complete. Initiating ETL process
+2025-07-19 04:10:52.732754: Data extraction complete. Initiating Transformation process
+2025-07-19 04:10:52.733715: Error during data transformation: [Errno 2] No such file or directory: './input/exchange_rate.csv'
+2025-07-19 04:10:52.735719: Data saved to CSV file
+2025-07-19 04:10:52.759719: Data loaded to Database as a table, Executing queries
+2025-07-19 04:10:52.760670: Process Complete
+2025-07-19 04:10:52.760670: Error executing query: no such column: MC_GBP_Billion
+2025-07-19 04:10:52.760670: Process Complete
+2025-07-19 04:11:07.858365: Preliminaries complete. Initiating ETL process
+2025-07-19 04:11:09.204029: Data extraction complete. Initiating Transformation process
+2025-07-19 04:11:09.206030: Error during data transformation: [Errno 2] No such file or directory: './input/exchange_rate.csv'
+2025-07-19 04:11:09.208544: Data saved to CSV file
+2025-07-19 04:11:09.226548: Data loaded to Database as a table, Executing queries
+2025-07-19 04:11:09.226548: Process Complete
+2025-07-19 04:11:09.227467: Error executing query: no such column: MC_GBP_Billion
+2025-07-19 04:11:09.227467: Process Complete
+2025-07-19 04:15:50.102939: Preliminaries complete. Initiating ETL process
+2025-07-19 04:15:52.119495: Data extraction complete. Initiating Transformation process
+2025-07-19 04:15:52.154177: Error during data transformation: "Missing required column: 'Market cap(US$ billion)'"
+2025-07-19 04:15:52.158615: Data saved to CSV file
+2025-07-19 04:15:52.198077: Data loaded to Database as a table, Executing queries
+2025-07-19 04:15:52.198596: Process Complete
+2025-07-19 04:15:52.198596: Error executing query: no such column: MC_GBP_Billion
+2025-07-19 04:15:52.199613: Process Complete
